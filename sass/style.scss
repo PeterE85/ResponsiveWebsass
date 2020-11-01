@@ -1,3 +1,116 @@
+//Import Google FOnts
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
 body {
-    background: black;
+    font-family: 'Poppins', sans-serif;
+}
+
+//Navigation Area
+.head__custom-nav {
+    .navbar-brand {
+        img {
+            width: 18px;
+            height: 18px;
+        }
+
+        span {
+            font-weight: 700;
+            font-size: 22px;
+            margin-left: 10px;
+        }
+    }
+
+    button {
+        padding: 0;
+
+        span {
+            img {
+                width: 45px;
+            }
+        }
+    }
+
+    #navbarNav {
+        .navbar-nav {
+            .nav-item {
+                .nav-link {
+                    color: #000;
+                    font-weight: 400;
+                    padding: 8px 15px;
+                    white-space: nowrap; //k cdo se peguen no bajen
+                    transition: .5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+
+                    &:hover {
+                        color: lightcoral;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//Section
+.custom-section {
+    width: inherit; //hereda el width del padre
+    padding: 40px 0;
+
+    @media (max-width: 991.98px) {
+        flex-direction: column-reverse; //lo elementos de abajo los pone encima
+    }
+
+    .col-lg-4 {
+        margin-top: 100px;
+        h2 {
+            font-weight: 700;
+            font-size: 63px;
+            color: #000;
+            margin-bottom: 0;
+            line-height: 1;
+            white-space: nowrap;
+        }
+
+        h3 {
+            font-weight: 300;
+            font-size: 64px;
+            color: #000;
+            line-height: 1;
+        }
+
+        p {
+            color: #000;
+            font-size: 14px;
+            margin-top: 30px;
+        }
+
+        a {
+            display: inline-block;
+            padding: 8px 22px;
+            color: #fff;
+            background: #1ea5f7;
+            border: 1px solid transparent;
+            margin-top: 60px;
+            transition: .5s cubic-bezier(0.785, 0.135, 0.86);
+
+            &:hover {
+                color: #1ea5f7;
+                background-color: #fff;
+                border: 1px solid #1ea5f7;
+            }
+        }
+    }
+
+    .col-lg-8 {
+        width: 100%;
+        position: absolute;
+        top: 2rem;
+        right: -8%;
+
+        @media (max-width: 991.98px) {
+            width: 100%;
+            position: relative;
+            top: 0;
+            right: 0;
+        }
+    }
+    
 }
